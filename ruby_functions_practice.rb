@@ -60,9 +60,6 @@ end
 
 def calculate_age (dob_d, dob_m, dob_y)
 require 'time'
-dob_d
-dob_m
-dob_y
 today = Time.now
 dob_str = dob_d+"-"+dob_m+"-"+dob_y
 dob_human = Time.parse(dob_str)
