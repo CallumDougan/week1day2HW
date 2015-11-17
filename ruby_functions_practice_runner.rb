@@ -74,9 +74,9 @@ puts "The volume of this sphere is #{spherical_volume(radius)} cubic units (if 1
 ####Days until christmas, Calculate how many nights there are from today until Christmas morning.
 
 puts "Would you like to know how many days remain before Christmas, y/n?"
-ans = gets
-  if ans == "n"
-puts "Have it your way, you boring jerk."
+response = gets.chomp
+  unless response == "y"
+puts "Have it your way, then."
   else
   puts "There are #{days_to_Santa} nights remaining before Christmas."
 end
