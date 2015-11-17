@@ -83,11 +83,21 @@ end
 
 ####Given a date of birth, calculate how old a person born on that date would be
 
-puts "Please enter your date of birth in the following format: DD/MM/YYYY"
+puts "Please enter your date of birth in the following format: DD"
 
-dob_man = gets.chomp
+dob_d = gets.chomp.to_str
 
+puts "Please enter your date of birth in the following format: MM"
 
+dob_m = gets.chomp.to_str
+
+puts "Please enter your date of birth in the following format: YYYY"
+
+dob_y = gets.chomp.to_str
+
+age = calculate_age(dob_d, dob_m, dob_y)
+
+puts "You are #{age} years old!"
 
 
 #### Create a command line interface using put, gets to interact with the your functions 

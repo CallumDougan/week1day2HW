@@ -58,14 +58,19 @@ christmas = Time.new(2015, 12, 25)
 christmas.yday - todays_date.yday
 end
 
-def date_of_birth (day, month, year)
+def calculate_age (dob_d, dob_m, dob_y)
+require 'time'
+dob_d
+dob_m
+dob_y
 today = Time.now
-dob = Time.new(year, month, day)
+dob_str = dob_d+"-"+dob_m+"-"+dob_y
+dob_human = Time.parse(dob_str)
 
-if today.yday > dob.yday
-  age = today.year - dob.year
+if today.yday > dob_human.yday
+  age = today.year - dob_human.year
   return age
-else age = today.year - dob.year - 1
+else age = today.year - dob_human.year - 1
   return age
 end
 end
